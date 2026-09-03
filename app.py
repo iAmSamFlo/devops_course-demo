@@ -8,6 +8,7 @@ unused_variable = 42
 
 # Function with high cyclomatic complexity (maintainability issue)
 
+
 def complex_function(x):
     if x > 0:
         if x % 2 == 0:
