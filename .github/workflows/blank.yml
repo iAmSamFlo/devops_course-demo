@@ -48,6 +48,7 @@ jobs:
           # Replace with your SonarCloud organization and project key
           organization: iamsamflo
           projectKey: iAmSamFlo_devops_course-demo
+          args: "-X"
         env:
           # Replace with your SonarCloud token
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
