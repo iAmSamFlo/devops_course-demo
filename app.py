@@ -7,6 +7,7 @@ API_KEY = "12345-abcdef-67890"
 unused_variable = 42
 
 # Function with high cyclomatic complexity (maintainability issue)
+
 def complex_function(x):
     if x > 0:
         if x % 2 == 0:
@@ -20,6 +21,7 @@ def complex_function(x):
             print("Negative odd number")
     else:
         print("Zero")
+
 
 # Call the function
 complex_function(5)
