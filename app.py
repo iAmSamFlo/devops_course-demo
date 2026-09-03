@@ -23,3 +23,6 @@ def complex_function(x):
 
 # Call the function
 complex_function(5)
+
+
+x = 72
