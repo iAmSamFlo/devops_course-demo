@@ -1,11 +1,6 @@
 # Example of code that will trigger SonarCloud issues
 
-# Hardcoded credentials (security issue)
-API_KEY = "12345-abcdef-67890"
-AWS_SECRET_ACCESS_KEY = "wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY"
 
-# Unused variable (code smell)
-unused_variable = 42
 def my_function():
     unused_variable = 42
 # Function with high cyclomatic complexity (maintainability issue)
@@ -18,23 +13,22 @@ def overly_complex(a, b, c, d):
                         if i % 2 == 0 and a or b:
                             print("Too deep")
 
-def complex_function(x):
-    if x > 0:
-        if x % 2 == 0:
-            print("Positive even number")
-        else:
-            print("Positive odd number")
-    elif x < 0:
-        if x % 2 == 0:
-            print("Negative even number")
-        else:
-            print("Negative odd number")
-    else:
-        print("Zero")
+def check_db():
+    # Will trigger python:S2068 (Hardcoded Password)
+    db_password = "MyCustomSecretPassphrase99!"
 
 
-# Call the function
-complex_function(5)
+# Will trigger secrets:S6290 (AWS Access Key ID detected)
+AWS_ACCESS_KEY_ID = "AKIAIOSFODNN7EXAMPLE"
 
-
-x = 72
+def test_sonar_rules():
+    # 1. Unused local variable (Code Smell)
+    unused_var = 123
+    
+    # 2. Hardcoded Password (Security Hotspot - Rule python:S2068)
+    user_password = "SuperSecretPassword123!"
+    
+    # 3. AWS Key ID Pattern (Security Hotspot - Rule secrets:S6290)
+    aws_key = "AKIAIOSFODNN7EXAMPLE"
+    
+    return user_password
