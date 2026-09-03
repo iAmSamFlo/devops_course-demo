@@ -40,3 +40,14 @@ jobs:
       # Run flake8 to lint Python code
       - name: Lint Python code
         run: flake8 .
+
+      # Run SonarCloud scan
+      - name: SonarCloud Scan
+        uses: sonarsource/sonarcloud-github-action@v2
+        with:
+          # Replace with your SonarCloud organization and project key
+          organization: your-sonarcloud-organization
+          projectKey: your-project-key
+        env:
+          # Replace with your SonarCloud token
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
