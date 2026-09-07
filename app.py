@@ -15,6 +15,7 @@ def overly_complex(a, b, c, d):
                         if i % 2 == 0 and a or b:
                             print("Too deep")
 
+
 def check_db():
     # Will trigger python:S2068 (Hardcoded Password)
     # db_password = "MyCustomSecretPassphrase99!"
