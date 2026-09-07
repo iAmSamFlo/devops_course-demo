@@ -6,26 +6,12 @@ def my_function():
 
 
 # Function with high cyclomatic complexity (maintainability issue)
-def overly_complex(a, b, c, d):
-    if a:
-        if b:
-            if c:
-                if d:
-                    for i in range(10):
-                        if i % 2 == 0 and a or b:
-                            print("Too deep")
 
 
 def check_db():
     # Will trigger python:S2068 (Hardcoded Password)
     # db_password = "MyCustomSecretPassphrase99!"
     print("hello world")
-
-
-# Intentionally vulnerable example for SonarCloud SQL injection detection.
-def find_user(connection, username):
-    query = f"SELECT * FROM users WHERE username = '{username}'"
-    return connection.execute(query).fetchall()
 
 
 def test_sonar_rules():
