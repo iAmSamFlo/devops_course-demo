@@ -22,6 +22,12 @@ def check_db():
     print("hello world")
 
 
+# Intentionally vulnerable example for SonarCloud SQL injection detection.
+def find_user(connection, username):
+    query = f"SELECT * FROM users WHERE username = '{username}'"
+    return connection.execute(query).fetchall()
+
+
 def test_sonar_rules():
     # 1. Unused local variable (Code Smell)
     # unused_var = 123
