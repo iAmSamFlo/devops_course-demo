@@ -16,6 +16,7 @@ def overly_complex(a, b, c, d):
 def check_db():
     # Will trigger python:S2068 (Hardcoded Password)
     db_password = "MyCustomSecretPassphrase99!"
+    korv = 12
 
 
 # Will trigger secrets:S6290 (AWS Access Key ID detected)
