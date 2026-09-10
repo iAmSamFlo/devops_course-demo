@@ -4,7 +4,6 @@
 def my_function():
     print("korv")
 
-
 # Function with high cyclomatic complexity (maintainability issue)
 def overly_complex(a, b, c, d):
     if a:
