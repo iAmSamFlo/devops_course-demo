@@ -5,14 +5,6 @@ def my_function():
     print("korv")
 
 # Function with high cyclomatic complexity (maintainability issue)
-def overly_complex(a, b, c, d):
-    if a:
-        if b:
-            if c:
-                if d:
-                    for i in range(10):
-                        if i % 2 == 0 and a or b:
-                            print("Too deep")
 
 
 def check_db():
