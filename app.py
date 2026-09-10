@@ -24,3 +24,7 @@ def test_sonar_rules():
     # aws_key = "AKIAIOSFODNN7EXAMPLE"
 
     return user_password
+
+
+def is_even(number):
+    return number % 2 == 0
