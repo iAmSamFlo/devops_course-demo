@@ -2,6 +2,8 @@ import unittest
 
 import app
 
+# test class
+
 
 class AppTests(unittest.TestCase):
     def test_my_function(self):
@@ -19,6 +21,12 @@ class AppTests(unittest.TestCase):
 
     def test_sonar_rules(self):
         self.assertEqual(app.test_sonar_rules(), "SuperSecretPassword123!")
+
+    def test_is_even_returns_true_for_even_numbers(self):
+        self.assertTrue(app.is_even(4))
+
+    def test_is_even_returns_false_for_odd_numbers(self):
+        self.assertFalse(app.is_even(5))
 
 
 if __name__ == "__main__":
